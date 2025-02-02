@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Full Coins_0: 7579649033388551613
+      Full Coins_1: 5182337409332842643
+      Full Coins_2: -9223030624319158204
+      Full Coins_3: -417952103161959578
+      Full Coins_4: 8211153740444559012
+      Full Coins_5: 4728949282085354172
+      Full Coins_6: -7448326815472472386
+      Full Coins_7: -4814455555316988656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
