@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject dontDestroy;
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +22,8 @@ public class PlayerController : MonoBehaviour
     }
     void OnMove()
     {
-        Debug.Log("Player is moving");
+        DontDestroyOnLoad(dontDestroy);
+        SceneManager.UnloadSceneAsync(1);
+        SceneManager.LoadScene(0, LoadSceneMode.Additive);
     }
 }
