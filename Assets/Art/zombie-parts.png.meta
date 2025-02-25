@@ -60,7 +60,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie-parts_0: -8367110965405708909
+      zombie-parts_1: -4334239753343778368
+      zombie-parts_2: -1770989955452620816
+      zombie-parts_3: -4902584841406236336
+      zombie-parts_4: 7408614832712123460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
