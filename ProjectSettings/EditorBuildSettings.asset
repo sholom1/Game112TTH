@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ZombieStomper.unity
     guid: 84864cdcb83e60644bf5ff2a579f23c9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Settings.unity
     guid: a76132a8afbddc041a0b267f18814165
   m_configObjects:

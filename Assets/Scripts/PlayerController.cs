@@ -1,8 +1,16 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    private Vector2 velocity;
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent<Zombie>(out Zombie zombie))
@@ -11,27 +19,14 @@ public class PlayerController : MonoBehaviour
             Destroy(zombie.gameObject);
         }
     }
-    //public GameObject dontDestroy;
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.A))
-    //    {
-    //        Debug.Log("A has been pressed");
-    //    }
-    //    if (Input.GetKey(KeyCode.A))
-    //    {
-    //        Debug.Log("A is being held down");
-    //    }
-    //    if (Input.GetKeyUp(KeyCode.A))
-    //    {
-    //        Debug.Log("A has been released");
-    //    }
-    //}
-    //void OnMove()
-    //{
-    //    DontDestroyOnLoad(dontDestroy);
-    //    SceneManager.UnloadSceneAsync(1);
-    //    SceneManager.LoadScene(0, LoadSceneMode.Additive);
-    //}
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        velocity = context.ReadValue<Vector2>();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.linearVelocity = velocity;
+    }
 }
