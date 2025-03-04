@@ -4,8 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector2 velocity;
+    private Vector2 playerInput;
     private Rigidbody2D rb;
+    public float JumpForce = 10;
+    public float MoveSpeed = 5;
 
     private void Start()
     {
@@ -22,11 +24,19 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        velocity = context.ReadValue<Vector2>();
+        playerInput = context.ReadValue<Vector2>();
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+        }
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = velocity;
+        rb.AddForce(playerInput * MoveSpeed, ForceMode2D.Force);
     }
 }
