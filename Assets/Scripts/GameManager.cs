@@ -16,12 +16,14 @@ public class GameManager : MonoBehaviour
             Destroy(Instance);
         }
         Instance = this;
+
+        ScoreText.text = $"${score.ToString()} / {RequiredScore}";
     }
     
     public void UpdateScore(int amount)
     {
         score += amount;
-        ScoreText.text = '$' + score.ToString();
+        ScoreText.text = $"${score.ToString()} / {RequiredScore}";
         if (score >= RequiredScore)
         {
             SceneManager.LoadScene(0);
