@@ -8,9 +8,13 @@ public class Zombie : MonoBehaviour
     {
         EnemyManager.Instance.Enemies.Add(this);   
     }
-    private void OnDestroy()
+    public void Die()
     {
         Destroy(Instantiate(DeathEffect, transform.position, Quaternion.identity), 5);
+        Destroy(gameObject);
+    }
+    private void OnDestroy()
+    {
         EnemyManager.Instance.Enemies.Remove(this);
     }
 }

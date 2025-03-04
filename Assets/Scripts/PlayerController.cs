@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Zombie>(out Zombie zombie))
         {
             GameManager.Instance.UpdateScore(2);
-            Destroy(zombie.gameObject);
+            zombie.Die();
         }
     }
 
